@@ -5,23 +5,19 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // int days = 30;
-    // String name = 'Codepur';
-    // double pi = 3.14;
-    // bool isMale = true;
-    // num temp = 30.5; // num can store int or double both
-    // var day = "Monday";
-    // const pi = 3.14;
-
     const int days = 30;
     const String name = 'Codepur';
 
-    return Material(
-      child: Center(
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Catalog'),
+      ),
+      body: Center(
         child: Container(
           child: Text('Welcome to $days days of flutter by $name'),
         ),
       ),
+      drawer: Drawer(),
     );
   }
 }
