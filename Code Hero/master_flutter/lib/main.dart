@@ -9,6 +9,11 @@ class NewApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: Text('Satyam'));
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(backgroundColor: Colors.red),
+        body: Text('Satyam'),
+      ),
+    );
   }
 }
