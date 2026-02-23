@@ -22,17 +22,24 @@ class NewApp extends StatelessWidget {
           ],
           leading: CircleAvatar(child: Text("S")),
         ),
-        body: Center(
-          child: Text(
-            'Satyam',
-            style: TextStyle(
-              color: Colors.red,
-              fontSize: 50,
-              fontWeight: FontWeight.bold,
-              letterSpacing: 5,
-            ),
-          ),
+        body: Column(
+          children: [
+            Text("Satyam Seth"),
+            CircleAvatar(child: Text("S")),
+            Container(width: 300, height: 300, color: Colors.pink),
+          ],
         ),
+        // Center(
+        //   child: Text(
+        //     'Satyam',
+        //     style: TextStyle(
+        //       color: Colors.red,
+        //       fontSize: 50,
+        //       fontWeight: FontWeight.bold,
+        //       letterSpacing: 5,
+        //     ),
+        //   ),
+        // ),
       ),
     );
   }
