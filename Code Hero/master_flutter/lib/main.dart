@@ -22,13 +22,20 @@ class NewApp extends StatelessWidget {
           ],
           leading: CircleAvatar(child: Text("S")),
         ),
-        body: Column(
+        body: Row(
           children: [
             Text("Satyam Seth"),
             CircleAvatar(child: Text("S")),
             Container(width: 300, height: 300, color: Colors.pink),
           ],
         ),
+        // Column(
+        //   children: [
+        //     Text("Satyam Seth"),
+        //     CircleAvatar(child: Text("S")),
+        //     Container(width: 300, height: 300, color: Colors.pink),
+        //   ],
+        // ),
         // Center(
         //   child: Text(
         //     'Satyam',
