@@ -41,6 +41,14 @@ class NewApp extends StatelessWidget {
                 ),
               ),
             ),
+            ElevatedButton(
+              onPressed: () {
+                print("Maine Button Click Kiya");
+              },
+              child: Text("Satyam Seth Button"),
+            ),
+            TextButton(onPressed: () {}, child: Text("Satyam Seth Text")),
+            IconButton(onPressed: () {}, icon: Icon(Icons.home)),
           ],
         ),
 
