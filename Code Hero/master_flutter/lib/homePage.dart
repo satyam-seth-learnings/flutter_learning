@@ -47,7 +47,8 @@ class HomePage extends StatelessWidget {
           IconButton(onPressed: () {}, icon: Icon(Icons.home)),
           ElevatedButton(
             onPressed: () {
-              Navigator.push(
+              // Navigator.push(
+              Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(builder: (context) => ProfilePage()),
               );
