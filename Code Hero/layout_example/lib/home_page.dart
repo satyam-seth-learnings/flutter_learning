@@ -13,15 +13,20 @@ class HomePage extends StatelessWidget {
         title: const Text('Home Page'),
         backgroundColor: Colors.deepPurple,
       ),
-      body: ListView.builder(
-        padding: EdgeInsets.all(10),
-        itemCount: names.length,
-        itemBuilder: (context, index) => Container(
-          margin: EdgeInsets.all(10),
-          padding: EdgeInsets.all(10),
-          color: Colors.white,
-          child: Text(names[index]),
+      body: GridView(
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 4,
+          mainAxisSpacing: 10,
+          crossAxisSpacing: 10,
         ),
+        children: names
+            .map(
+              (name) => Container(
+                color: Colors.white,
+                child: Center(child: Text(name)),
+              ),
+            )
+            .toList(),
       ),
     );
   }
