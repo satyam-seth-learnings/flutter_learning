@@ -13,20 +13,17 @@ class HomePage extends StatelessWidget {
         title: const Text('Home Page'),
         backgroundColor: Colors.deepPurple,
       ),
-      body: GridView(
+      body: GridView.builder(
+        itemCount: names.length,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 4,
           mainAxisSpacing: 10,
           crossAxisSpacing: 10,
         ),
-        children: names
-            .map(
-              (name) => Container(
-                color: Colors.white,
-                child: Center(child: Text(name)),
-              ),
-            )
-            .toList(),
+        itemBuilder: (context, index) => Container(
+          color: Colors.white,
+          child: Center(child: Text(names[index])),
+        ),
       ),
     );
   }
