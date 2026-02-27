@@ -5,6 +5,8 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<String> names = ["Satyam", "Shivam", "Sundaram", "India"];
+
     return Scaffold(
       backgroundColor: Colors.deepPurple.shade200,
       appBar: AppBar(
@@ -12,14 +14,17 @@ class HomePage extends StatelessWidget {
         backgroundColor: Colors.deepPurple,
       ),
       body: Column(
-        crossAxisAlignment: CrossAxisAlignment.end,
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [Container(height: 100, width: 100, color: Colors.white)],
-          ),
-        ],
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: names
+            .map(
+              (name) => Container(
+                margin: EdgeInsets.all(10),
+                padding: EdgeInsets.all(10),
+                color: Colors.white,
+                child: Text(name, style: TextStyle(fontSize: 20)),
+              ),
+            )
+            .toList(),
       ),
     );
   }
